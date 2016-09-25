@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final String DEBUG_TAG = "DEBUG";
+
     TextView tv_Result;
     EditText et_Input;
     Button btn_Calculate;
@@ -34,19 +36,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("onStart", "onStart Running");
+        Log.d(DEBUG_TAG, "onStart Running");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("onResume", "onResume Running");
+        Log.d(DEBUG_TAG, "onResume Running");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("onPause", "onPause Running");
+        Log.d(DEBUG_TAG, "onPause Running");
     }
 
     private OnClickListener calculate_Result = new OnClickListener() {
