@@ -3,6 +3,7 @@ package com.example.aaron.practice;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -33,13 +34,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        Log.d("onStart", "onStart Running");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        Log.d("onResume", "onResume Running");
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("onPause", "onPause Running");
     }
 
     private OnClickListener calculate_Result = new OnClickListener() {
